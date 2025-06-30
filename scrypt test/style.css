@@ -1,36 +1,31 @@
-/* Basic Reset & Body Styles */
 body {
     margin: 0;
-    font-family: 'Jost', sans-serif; /* Applied Jost font globally */
-    background-color: #2B0307; /* Dark red background */
-    color: #FFFFFF; /* White text for general content */
+    font-family: 'Jost', sans-serif; 
+    background-color: #2B0307; 
+    color: #FFFFFF; 
     min-height: 100vh;
     overflow-x: hidden;
 }
 
 .container {
     display: flex;
-    width: 100%; /* Take full width */
-    min-height: 100vh; /* Ensure container spans full height */
+    width: 100%;
+    min-height: 100vh; 
 }
-
-/* Sidebar Styles */
 .sidebar {
     width: 250px;
-    background-color: #75020F; /* Light red for sidebar */
+    background-color: #75020F; 
     padding: 0;
     box-shadow: 2px 0 5px rgba(0, 0, 0, 0.3);
-    min-height: 100vh; /* Ensure sidebar is full height */
+    min-height: 100vh; 
     display: flex;
     flex-direction: column;
     align-items: center;
-    position: sticky; /* Make sidebar sticky if content scrolls */
+    position: sticky; 
     top: 0;
     left: 0;
-    font-family: 'Jost', sans-serif; /* Ensuring Jost is set on the sidebar parent */
+    font-family: 'Jost', sans-serif; 
 }
-
-/* Logo Section within Sidebar */
 .logo-section {
     width: 100%;
     text-align: center;
@@ -39,17 +34,16 @@ body {
 }
 
 .scripta-text-container {
-    background-size: cover; /* Cover the entire container */
-    background-position: center; /* Center the background image */
+    background-size: cover; 
+    background-position: center;
     padding: 20px 0;
     margin-bottom: 40px;
-    position: relative; /* Needed for any overlays or specific text positioning */
-    background-color: #3C0A0E; /* A solid dark red/brown */
-}
+    position: relative; 
+    background-color: #3C0A0E;
 
 .scripta-text-container h1 {
     font-size: 3em;
-    color: #A5943D; /* Gold color for "Scripta" text */
+    color: #A5943D; 
     margin: 0;
     text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
 }
@@ -68,7 +62,7 @@ body {
 .sidebar .menu li a {
     display: block;
     padding: 12px 20px;
-    color: #FFFFFF; /* White for sidebar menu items */
+    color: #FFFFFF; 
     text-decoration: none;
     font-size: 1.1em;
     transition: background-color 0.3s ease;
@@ -79,49 +73,47 @@ body {
 }
 
 .sidebar .menu .menu-header {
-    color: #A5943D; /* Gold color for "> Menu" */
-    font-size: 1.4em; /* Increased size for prominence */
+    color: #A5943D;
+    font-size: 1.4em; 
     font-weight: bold;
     padding: 12px 20px;
     margin-bottom: 15px;
-    font-family: 'Jost', sans-serif; /* Explicitly ensure Jost for menu header */
+    font-family: 'Jost', sans-serif; 
 }
-
-/* Main Content Styles */
 .main-content {
     flex-grow: 1;
     padding: 20px 40px;
-    background-color: #2B0307; /* Ensure main content has the dark red background */
+    background-color: #2B0307; 
 }
 
 .header {
     display: flex;
-    justify-content: center; /* Center header content */
+    justify-content: center; 
     align-items: center;
     margin-bottom: 50px;
-    position: relative; /* Needed for positioning children like home icon */
+    position: relative; 
 }
 
-.home-icon-link { /* New style for the home icon link wrapper */
+.home-icon-link {
     position: absolute;
     left: 0;
-    display: flex; /* Make it a flex container to align the icon */
+    display: flex; 
     align-items: center;
-    text-decoration: none; /* Remove underline from the link */
-    color: inherit; /* Inherit color from home-icon */
+    text-decoration: none; 
+    color: inherit;
 }
 
 .home-icon {
-    color: #A5943D; /* Gold for home icon */
-    font-size: 1.5em; /* Make it a bit larger */
-    padding: 10px; /* Add some padding around the icon */
+    color: #A5943D; 
+    font-size: 1.5em;
+    padding: 10px; 
     cursor: pointer;
 }
 
 .search-bar {
     display: flex;
     align-items: center;
-    background-color: #75020F; /* Light red for search bar background */
+    background-color: #75020F; 
     border-radius: 20px;
     padding: 8px 15px;
     width: 300px;
@@ -132,18 +124,18 @@ body {
     flex-grow: 1;
     border: none;
     background: transparent;
-    color: #FFFFFF; /* White for input text */
+    color: #FFFFFF;
     font-size: 1em;
     outline: none;
     padding: 5px 0;
 }
 
 .search-bar input::placeholder {
-    color: #CCC; /* Lighter white for placeholder */
+    color: #CCC; 
 }
 
 .search-bar .search-icon {
-    color: #FFFFFF; /* White for search icon */
+    color: #FFFFFF; 
     margin-left: 10px;
     font-size: 1.2em;
 }
@@ -155,38 +147,34 @@ body {
 
 .welcome-section h1 {
     font-size: 2.5em;
-    color: #A5943D; /* Gold for welcome text */
+    color: #A5943D; 
     font-weight: normal;
     letter-spacing: 1px;
 }
 
-.welcome-section .description { /* Style for cipher description */
+.welcome-section .description { 
     max-width: 800px;
     margin: 20px auto 40px auto;
     font-size: 1.1em;
     line-height: 1.6;
-    color: #E0E0E0; /* Slightly off-white for body text */
+    color: #E0E0E0; 
 }
-
-
-/* Cipher Cards Section (on index.html and classical-ciphers.html) */
 .cipher-cards {
     display: grid;
-    grid-template-columns: repeat(2, 1fr); /* Two columns */
-    gap: 30px; /* Space between cards */
-    max-width: 1000px; /* Limit width of card grid */
-    margin: 0 auto; /* Center the cards */
+    grid-template-columns: repeat(2, 1fr);
+    max-width: 1000px; 
+    margin: 0 auto; 
 }
 
 .card {
-    background-color: #FFFFFF; /* White for cards */
+    background-color: #FFFFFF; 
     border-radius: 15px;
     padding: 40px;
     text-align: center;
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 180px; /* Minimum height for cards */
+    min-height: 180px; 
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     cursor: pointer;
@@ -199,12 +187,10 @@ body {
 
 .card h2 {
     font-size: 1.8em;
-    color: #2B0307; /* Dark red for card titles */
+    color: #2B0307; 
     font-weight: normal;
     margin: 0;
 }
-
-/* Cipher Tool Section (on cipher-specific pages) */
 .cipher-tool {
     display: flex;
     justify-content: center;
@@ -212,17 +198,17 @@ body {
 }
 
 .tool-card {
-    background-color: #75020F; /* Light red for the tool card background */
+    background-color: #75020F; 
     border-radius: 15px;
     padding: 30px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
     width: 100%;
-    max-width: 600px; /* Max width for the tool card */
+    max-width: 600px; 
     text-align: center;
 }
 
 .tool-card h3 {
-    color: #A5943D; /* Gold for section headers within the tool card */
+    color: #A5943D;
     margin-top: 20px;
     margin-bottom: 10px;
     font-size: 1.3em;
@@ -231,29 +217,29 @@ body {
 .tool-card textarea,
 .tool-card input[type="text"],
 .tool-card input[type="number"] {
-    width: calc(100% - 20px); /* Full width minus padding */
+    width: calc(100% - 20px); 
     padding: 10px;
     margin-bottom: 20px;
-    border: 1px solid #A5943D; /* Gold border */
+    border: 1px solid #A5943D; 
     border-radius: 8px;
-    background-color: #2B0307; /* Dark red background for inputs */
-    color: #FFFFFF; /* White text color */
+    background-color: #2B0307; 
+    color: #FFFFFF; 
     font-family: 'Jost', sans-serif;
     font-size: 1em;
-    box-sizing: border-box; /* Include padding and border in the element's total width and height */
-    resize: vertical; /* Allow vertical resizing for textareas */
+    box-sizing: border-box; 
+    resize: vertical; 
 }
 
 .tool-card textarea::placeholder,
 .tool-card input::placeholder {
-    color: #BBB; /* Lighter placeholder text */
+    color: #BBB; 
 }
 
 .tool-card textarea:focus,
 .tool-card input:focus {
     outline: none;
-    border-color: #FFD700; /* Brighter gold on focus */
-    box-shadow: 0 0 8px rgba(165, 148, 61, 0.5); /* Gold glow on focus */
+    border-color: #FFD700;
+    box-shadow: 0 0 8px rgba(165, 148, 61, 0.5); 
 }
 
 .tool-buttons {
@@ -265,8 +251,8 @@ body {
 }
 
 .tool-buttons button {
-    background-color: #A5943D; /* Gold button background */
-    color: #2B0307; /* Dark red text */
+    background-color: #A5943D; 
+    color: #2B0307; 
     border: none;
     border-radius: 8px;
     padding: 12px 25px;
@@ -278,15 +264,12 @@ body {
 }
 
 .tool-buttons button:hover {
-    background-color: #FFD700; /* Brighter gold on hover */
+    background-color: #FFD700; 
     transform: translateY(-2px);
 }
-
-
-/* Responsive Adjustments */
 @media (max-width: 1024px) {
     .container {
-        flex-direction: column; /* Stack sidebar and main content */
+        flex-direction: column; 
     }
 
     .sidebar {
@@ -294,7 +277,7 @@ body {
         min-height: auto;
         padding-bottom: 20px;
         box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
-        position: relative; /* Change to relative for mobile layout */
+        position: relative; 
     }
 
     .logo-section {
@@ -330,8 +313,8 @@ body {
     }
 
     .home-icon-link {
-        position: static; /* Reset position for smaller screens */
-        margin-right: 15px; /* Add some space if it's inline */
+        position: static; 
+        margin-right: 15px; 
     }
 
     .search-bar {
@@ -377,7 +360,7 @@ body {
     }
 
     .tool-buttons {
-        flex-direction: column; /* Stack buttons vertically on small screens */
+        flex-direction: column; 
         gap: 10px;
     }
 
