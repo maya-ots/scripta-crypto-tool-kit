@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RC4 Cipher - Crypto Tool-kit</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <aside class="sidebar">
+            <div class="logo-section">
+                <div class="scripta-text-container">
+                    <h1>Scripta</h1>
+                </div>
+            </div>
+            <nav class="menu">
+                <ul>
+                    <li class="menu-header">> Menu</li>
+                    <li><a href="classical-ciphers.html">Classical Ciphers</a></li>
+                    <li><a href="stream-block-ciphers.html">Stream & Block Ciphers</a></li>
+                    <li><a href="#">Asymmetric Encryption</a></li>
+                    <li><a href="#">Hash Functions</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                </ul>
+            </nav>
+        </aside>
+
+        <main class="main-content">
+            <header class="header">
+                <a href="index.html" class="home-icon-link">
+                    <i class="fas fa-home home-icon"></i>
+                </a>
+                <div class="search-bar">
+                    <input type="text" placeholder="Search...">
+                    <i class="fas fa-search search-icon"></i>
+                </div>
+            </header>
+
+            <section class="welcome-section">
+                <h1>RC4 Cipher (Rivest Cipher 4)</h1>
+                <p class="description">RC4 is a stream cipher. While historically popular for its simplicity and speed, it is now considered insecure for new applications due to known vulnerabilities. It uses a variable-length key (typically 40-256 bits) to generate a pseudo-random keystream, which is then XORed with the plaintext.</p>
+            </section>
+
+            <section class="cipher-tool">
+                <div class="tool-card">
+                    <h3>Encryption</h3>
+                    <h3>Plaintext</h3>
+                    <textarea id="plaintextInput" rows="6" placeholder="Enter text to encrypt..."></textarea>
+                    <h3>Encryption Key (String)</h3>
+                    <input type="text" id="encryptionKey" placeholder="Enter encryption key...">
+                    <div class="tool-buttons">
+                        <button id="encryptButton">Encrypt</button>
+                    </div>
+                    <h3>Output Ciphertext (Base64 Encoded)</h3>
+                    <textarea id="outputCiphertext" rows="6" readonly placeholder="Result will appear here..."></textarea>
+
+                    <hr style="border-color: #6a0a0a; margin: 30px auto; width: 80%;"> <h3>Decryption</h3>
+                    <h3>Ciphertext (Base64 Encoded)</h3>
+                    <textarea id="ciphertextInput" rows="6" placeholder="Enter Base64 ciphertext..."></textarea>
+                    <h3>Decryption Key (String)</h3>
+                    <input type="text" id="decryptionKey" placeholder="Enter decryption key...">
+                    <div class="tool-buttons">
+                        <button id="decryptButton">Decrypt</button>
+                    </div>
+                    <h3>Output Decrypted Text</h3>
+                    <textarea id="outputDecryptedText" rows="6" readonly placeholder="Result will appear here..."></textarea>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

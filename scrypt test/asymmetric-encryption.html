@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asymmetric Encryption - Crypto Tool-kit</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <aside class="sidebar">
+            <div class="logo-section">
+                <div class="scripta-text-container">
+                    <h1>Scripta</h1>
+                </div>
+            </div>
+            <nav class="menu">
+                <ul>
+                    <li class="menu-header">> Menu</li>
+                    <li><a href="classical-ciphers.html">Classical Ciphers</a></li>
+                    <li><a href="stream-block-ciphers.html">Stream & Block Ciphers</a></li>
+                    <li><a href="asymmetric-encryption.html" class="active">Asymmetric Encryption</a></li>
+                    <li><a href="hash-functions.html">Hash Functions</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                </ul>
+            </nav>
+        </aside>
+
+        <main class="main-content">
+            <header class="header">
+                <a href="index.html" class="home-icon-link">
+                    <i class="fas fa-home home-icon"></i>
+                </a>
+                <div class="search-bar">
+                    <input type="text" placeholder="Search...">
+                    <i class="fas fa-search search-icon"></i>
+                </div>
+            </header>
+
+            <section class="welcome-section">
+                <h1>Asymmetric Encryption (Public-Key Cryptography)</h1>
+                <p class="description">Asymmetric encryption uses a pair of mathematically linked keys: a public key (which can be freely shared) and a private key (which must be kept secret). Data encrypted with the public key can only be decrypted with the corresponding private key. This tool demonstrates RSA encryption/decryption and Diffie-Hellman key exchange.</p>
+            </section>
+
+            <section class="cipher-tool">
+                <div class="tool-card">
+                    <h3>RSA Key Pair Generation</h3>
+                    <p>Generate a new public and private key pair for RSA. The private key should be kept secret!</p>
+                    <div class="tool-buttons">
+                        <button id="generateKeyPairButton">Generate RSA Key Pair</button>
+                    </div>
+                    <h3>Public Key (JWK Format)</h3>
+                    <textarea id="publicKeyOutput" rows="8" readonly placeholder="Your generated public key will appear here..."></textarea>
+                    <h3>Private Key (JWK Format)</h3>
+                    <textarea id="privateKeyOutput" rows="8" readonly placeholder="Your generated private key will appear here..."></textarea>
+
+                    <hr style="border-color: #6a0a0a; margin: 30px auto; width: 80%;">
+
+                    <h3>RSA Encryption with Public Key</h3>
+                    <h3>Plaintext</h3>
+                    <textarea id="rsaPlaintextInput" rows="6" placeholder="Enter text to encrypt..."></textarea>
+                    <h3>Public Key (JWK Format)</h3>
+                    <textarea id="rsaEncryptionPublicKeyInput" rows="8" placeholder="Paste the Public Key (from above or another source) here..."></textarea>
+                    <div class="tool-buttons">
+                        <button id="rsaEncryptButton">Encrypt</button>
+                    </div>
+                    <h3>Ciphertext (Base64 Encoded)</h3>
+                    <textarea id="rsaOutputCiphertext" rows="6" readonly placeholder="Encrypted output will appear here..."></textarea>
+
+                    <hr style="border-color: #6a0a0a; margin: 30px auto; width: 80%;">
+
+                    <h3>RSA Decryption with Private Key</h3>
+                    <h3>Ciphertext (Base64 Encoded)</h3>
+                    <textarea id="rsaCiphertextInput" rows="6" placeholder="Paste the ciphertext here..."></textarea>
+                    <h3>Private Key (JWK Format)</h3>
+                    <textarea id="rsaDecryptionPrivateKeyInput" rows="8" placeholder="Paste the Private Key (from generation or backup) here..."></textarea>
+                    <div class="tool-buttons">
+                        <button id="rsaDecryptButton">Decrypt</button>
+                    </div>
+                    <h3>Decrypted Text</h3>
+                    <textarea id="rsaOutputDecryptedText" rows="6" readonly placeholder="Decrypted output will appear here..."></textarea>
+
+                    <hr style="border-color: #6a0a0a; margin: 30px auto; width: 80%;">
+
+                    <h3>Diffie-Hellman Key Exchange</h3>
+                    <p>Simulate a Diffie-Hellman key exchange between Alice and Bob to derive a common, secure shared secret key.</p>
+
+                    <h4>Alice's Side</h4>
+                    <div class="tool-buttons">
+                        <button id="generateAliceKeysButton">Generate Alice's Keys</button>
+                    </div>
+                    <h3>Alice's Private Key (JWK)</h3>
+                    <textarea id="alicePrivateKeyOutput" rows="6" readonly placeholder="Alice's generated private key..."></textarea>
+                    <h3>Alice's Public Key (JWK)</h3>
+                    <textarea id="alicePublicKeyOutput" rows="6" readonly placeholder="Alice's generated public key..."></textarea>
+                    <h3>Bob's Public Key (Paste from Bob)</h3>
+                    <textarea id="aliceBobsPublicKeyInput" rows="6" placeholder="Paste Bob's public key here to derive shared secret..."></textarea>
+                    <div class="tool-buttons">
+                        <button id="deriveAliceSharedSecretButton">Derive Alice's Shared Secret</button>
+                    </div>
+                    <h3>Alice's Shared Secret (Base64 Encoded)</h3>
+                    <textarea id="aliceSharedSecretOutput" rows="2" readonly placeholder="Derived shared secret..."></textarea>
+
+                    <hr style="border-color: #6a0a0a; margin: 30px auto; width: 80%;">
+
+                    <h4>Bob's Side</h4>
+                    <div class="tool-buttons">
+                        <button id="generateBobKeysButton">Generate Bob's Keys</button>
+                    </div>
+                    <h3>Bob's Private Key (JWK)</h3>
+                    <textarea id="bobPrivateKeyOutput" rows="6" readonly placeholder="Bob's generated private key..."></textarea>
+                    <h3>Bob's Public Key (JWK)</h3>
+                    <textarea id="bobPublicKeyOutput" rows="6" readonly placeholder="Bob's generated public key..."></textarea>
+                    <h3>Alice's Public Key (Paste from Alice)</h3>
+                    <textarea id="bobAlicesPublicKeyInput" rows="6" placeholder="Paste Alice's public key here to derive shared secret..."></textarea>
+                    <div class="tool-buttons">
+                        <button id="deriveBobSharedSecretButton">Derive Bob's Shared Secret</button>
+                    </div>
+                    <h3>Bob's Shared Secret (Base64 Encoded)</h3>
+                    <textarea id="bobSharedSecretOutput" rows="2" readonly placeholder="Derived shared secret..."></textarea>
+
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

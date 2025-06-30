@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hash Functions - Crypto Tool-kit</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <aside class="sidebar">
+            <div class="logo-section">
+                <div class="scripta-text-container">
+                    <h1>Scripta</h1>
+                </div>
+            </div>
+            <nav class="menu">
+                <ul>
+                    <li class="menu-header">> Menu</li>
+                    <li><a href="classical-ciphers.html">Classical Ciphers</a></li>
+                    <li><a href="stream-block-ciphers.html">Stream & Block Ciphers</a></li>
+                    <li><a href="asymmetric-encryption.html">Asymmetric Encryption</a></li>
+                    <li><a href="hash-functions.html">Hash Functions</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                </ul>
+            </nav>
+        </aside>
+
+        <main class="main-content">
+            <header class="header">
+                <a href="index.html" class="home-icon-link">
+                    <i class="fas fa-home home-icon"></i>
+                </a>
+                <div class="search-bar">
+                    <input type="text" placeholder="Search...">
+                    <i class="fas fa-search search-icon"></i>
+                </div>
+            </header>
+
+            <section class="welcome-section">
+                <h1>Hash Functions</h1>
+                <p class="description">Hash functions are one-way cryptographic algorithms that transform data of any size into a fixed-size string of characters, called a hash value or digest. They are crucial for ensuring data integrity, digital signatures, and password storage, as even a small change in the input data results in a drastically different hash value.</p>
+            </section>
+
+            <section class="cipher-tool">
+                <div class="tool-card">
+                    <h3>Input Text for Hashing</h3>
+                    <textarea id="hashInput" rows="6" placeholder="Enter your text here to calculate its hash..."></textarea>
+
+                    <hr style="border-color: #6a0a0a; margin: 30px auto; width: 80%;">
+
+                    <h3>MD5 Hash</h3>
+                    <div class="tool-buttons">
+                        <button id="md5Button">Calculate MD5</button>
+                    </div>
+                    <textarea id="md5Output" rows="2" readonly placeholder="MD5 hash will appear here..."></textarea>
+
+                    <hr style="border-color: #6a0a0a; margin: 30px auto; width: 80%;">
+
+                    <h3>SHA-1 Hash</h3>
+                    <div class="tool-buttons">
+                        <button id="sha1Button">Calculate SHA-1</button>
+                    </div>
+                    <textarea id="sha1Output" rows="2" readonly placeholder="SHA-1 hash will appear here..."></textarea>
+
+                    <hr style="border-color: #6a0a0a; margin: 30px auto; width: 80%;">
+
+                    <h3>SHA-256 Hash</h3>
+                    <div class="tool-buttons">
+                        <button id="sha256Button">Calculate SHA-256</button>
+                    </div>
+                    <textarea id="sha256Output" rows="2" readonly placeholder="SHA-256 hash will appear here..."></textarea>
+
+                    <hr style="border-color: #6a0a0a; margin: 30px auto; width: 80%;">
+
+                    <h3>SHA-512 Hash</h3>
+                    <div class="tool-buttons">
+                        <button id="sha512Button">Calculate SHA-512</button>
+                    </div>
+                    <textarea id="sha512Output" rows="2" readonly placeholder="SHA-512 hash will appear here..."></textarea>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.2.0/crypto-js.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

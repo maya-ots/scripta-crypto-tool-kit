@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DES Cipher - Crypto Tool-kit</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <aside class="sidebar">
+            <div class="logo-section">
+                <div class="scripta-text-container">
+                    <h1>Scripta</h1>
+                </div>
+            </div>
+            <nav class="menu">
+                <ul>
+                    <li class="menu-header">> Menu</li>
+                    <li><a href="classical-ciphers.html">Classical Ciphers</a></li>
+                    <li><a href="stream-block-ciphers.html">Stream & Block Ciphers</a></li>
+                    <li><a href="#">Asymmetric Encryption</a></li>
+                    <li><a href="#">Hash Functions</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                </ul>
+            </nav>
+        </aside>
+
+        <main class="main-content">
+            <header class="header">
+                <a href="index.html" class="home-icon-link">
+                    <i class="fas fa-home home-icon"></i>
+                </a>
+                <div class="search-bar">
+                    <input type="text" placeholder="Search...">
+                    <i class="fas fa-search search-icon"></i>
+                </div>
+            </header>
+
+            <section class="welcome-section">
+                <h1>DES Cipher (Data Encryption Standard)</h1>
+                <p class="description">DES is a symmetric block cipher, encrypting data in 64-bit blocks using a 56-bit key. Developed in the 1970s, it was once a widely used standard but is now considered insecure for most applications due to its relatively short key length, making it vulnerable to brute-force attacks. However, it's still foundational for understanding cryptography.</p>
+            </section>
+
+            <section class="cipher-tool">
+                <div class="tool-card">
+                    <h3>Encryption</h3>
+                    <h3>Plaintext</h3>
+                    <textarea id="desPlaintextInput" rows="6" placeholder="Enter text to encrypt..."></textarea>
+                    <h3>Encryption Key (String - 8 characters)</h3>
+                    <input type="text" id="desEncryptionKey" placeholder="Enter an 8-character key...">
+                    <h3>Initialization Vector (IV - String - 8 characters)</h3>
+                    <input type="text" id="desEncryptionIV" placeholder="Enter an 8-character IV...">
+                    <div class="tool-buttons">
+                        <button id="desEncryptButton">Encrypt</button>
+                    </div>
+                    <h3>Output Ciphertext (Base64 Encoded)</h3>
+                    <textarea id="desOutputCiphertext" rows="6" readonly placeholder="Result will appear here..."></textarea>
+
+                    <hr style="border-color: #6a0a0a; margin: 30px auto; width: 80%;"> <h3>Decryption</h3>
+                    <h3>Ciphertext (Base64 Encoded)</h3>
+                    <textarea id="desCiphertextInput" rows="6" placeholder="Enter Base64 ciphertext..."></textarea>
+                    <h3>Decryption Key (String - 8 characters)</h3>
+                    <input type="text" id="desDecryptionKey" placeholder="Enter the 8-character key...">
+                    <h3>Initialization Vector (IV - String - 8 characters)</h3>
+                    <input type="text" id="desDecryptionIV" placeholder="Enter the 8-character IV...">
+                    <div class="tool-buttons">
+                        <button id="desDecryptButton">Decrypt</button>
+                    </div>
+                    <h3>Output Decrypted Text</h3>
+                    <textarea id="desOutputDecryptedText" rows="6" readonly placeholder="Result will appear here..."></textarea>
+                </div>
+            </section>
+        </main>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.2.0/crypto-js.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

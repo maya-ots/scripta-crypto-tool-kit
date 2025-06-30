@@ -1,0 +1,435 @@
+/* Basic Reset & Body Styles */
+body {
+    margin: 0;
+    font-family: 'Jost', sans-serif; /* Applied Jost font globally */
+    background-color: #2B0307; /* Dark red background */
+    color: #FFFFFF; /* White text for general content */
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+.container {
+    display: flex;
+    width: 100%; /* Take full width */
+    min-height: 100vh; /* Ensure container spans full height */
+}
+
+/* Sidebar Styles */
+.sidebar {
+    width: 250px;
+    background-color: #75020F; /* Light red for sidebar */
+    padding: 0;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.3);
+    min-height: 100vh; /* Ensure sidebar is full height */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: sticky; /* Make sidebar sticky if content scrolls */
+    top: 0;
+    left: 0;
+    font-family: 'Jost', sans-serif; /* Ensuring Jost is set on the sidebar parent */
+}
+
+/* Logo Section within Sidebar */
+.logo-section {
+    width: 100%;
+    text-align: center;
+    padding-top: 20px;
+    box-sizing: border-box;
+}
+
+.scripta-text-container {
+    background-size: cover; /* Cover the entire container */
+    background-position: center; /* Center the background image */
+    padding: 20px 0;
+    margin-bottom: 40px;
+    position: relative; /* Needed for any overlays or specific text positioning */
+    background-color: #3C0A0E; /* A solid dark red/brown */
+}
+
+.scripta-text-container h1 {
+    font-size: 3em;
+    color: #A5943D; /* Gold color for "Scripta" text */
+    margin: 0;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+}
+
+.sidebar .menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+}
+
+.sidebar .menu li {
+    margin-bottom: 10px;
+}
+
+.sidebar .menu li a {
+    display: block;
+    padding: 12px 20px;
+    color: #FFFFFF; /* White for sidebar menu items */
+    text-decoration: none;
+    font-size: 1.1em;
+    transition: background-color 0.3s ease;
+}
+
+.sidebar .menu li a:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.sidebar .menu .menu-header {
+    color: #A5943D; /* Gold color for "> Menu" */
+    font-size: 1.4em; /* Increased size for prominence */
+    font-weight: bold;
+    padding: 12px 20px;
+    margin-bottom: 15px;
+    font-family: 'Jost', sans-serif; /* Explicitly ensure Jost for menu header */
+}
+
+/* Main Content Styles */
+.main-content {
+    flex-grow: 1;
+    padding: 20px 40px;
+    background-color: #2B0307; /* Ensure main content has the dark red background */
+}
+
+.header {
+    display: flex;
+    justify-content: center; /* Center header content */
+    align-items: center;
+    margin-bottom: 50px;
+    position: relative; /* Needed for positioning children like home icon */
+}
+
+.home-icon-link { /* New style for the home icon link wrapper */
+    position: absolute;
+    left: 0;
+    display: flex; /* Make it a flex container to align the icon */
+    align-items: center;
+    text-decoration: none; /* Remove underline from the link */
+    color: inherit; /* Inherit color from home-icon */
+}
+
+.home-icon {
+    color: #A5943D; /* Gold for home icon */
+    font-size: 1.5em; /* Make it a bit larger */
+    padding: 10px; /* Add some padding around the icon */
+    cursor: pointer;
+}
+
+.search-bar {
+    display: flex;
+    align-items: center;
+    background-color: #75020F; /* Light red for search bar background */
+    border-radius: 20px;
+    padding: 8px 15px;
+    width: 300px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+}
+
+.search-bar input {
+    flex-grow: 1;
+    border: none;
+    background: transparent;
+    color: #FFFFFF; /* White for input text */
+    font-size: 1em;
+    outline: none;
+    padding: 5px 0;
+}
+
+.search-bar input::placeholder {
+    color: #CCC; /* Lighter white for placeholder */
+}
+
+.search-bar .search-icon {
+    color: #FFFFFF; /* White for search icon */
+    margin-left: 10px;
+    font-size: 1.2em;
+}
+
+.welcome-section {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.welcome-section h1 {
+    font-size: 2.5em;
+    color: #A5943D; /* Gold for welcome text */
+    font-weight: normal;
+    letter-spacing: 1px;
+}
+
+.welcome-section .description { /* Style for cipher description */
+    max-width: 800px;
+    margin: 20px auto 40px auto;
+    font-size: 1.1em;
+    line-height: 1.6;
+    color: #E0E0E0; /* Slightly off-white for body text */
+}
+
+
+/* Cipher Cards Section (on index.html and classical-ciphers.html) */
+.cipher-cards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Two columns */
+    gap: 30px; /* Space between cards */
+    max-width: 1000px; /* Limit width of card grid */
+    margin: 0 auto; /* Center the cards */
+}
+
+.card {
+    background-color: #FFFFFF; /* White for cards */
+    border-radius: 15px;
+    padding: 40px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 180px; /* Minimum height for cards */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.6);
+}
+
+.card h2 {
+    font-size: 1.8em;
+    color: #2B0307; /* Dark red for card titles */
+    font-weight: normal;
+    margin: 0;
+}
+
+/* Cipher Tool Section (on cipher-specific pages) */
+.cipher-tool {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+
+.tool-card {
+    background-color: #75020F; /* Light red for the tool card background */
+    border-radius: 15px;
+    padding: 30px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
+    width: 100%;
+    max-width: 600px; /* Max width for the tool card */
+    text-align: center;
+}
+
+.tool-card h3 {
+    color: #A5943D; /* Gold for section headers within the tool card */
+    margin-top: 20px;
+    margin-bottom: 10px;
+    font-size: 1.3em;
+}
+
+.tool-card textarea,
+.tool-card input[type="text"],
+.tool-card input[type="number"] {
+    width: calc(100% - 20px); /* Full width minus padding */
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #A5943D; /* Gold border */
+    border-radius: 8px;
+    background-color: #2B0307; /* Dark red background for inputs */
+    color: #FFFFFF; /* White text color */
+    font-family: 'Jost', sans-serif;
+    font-size: 1em;
+    box-sizing: border-box; /* Include padding and border in the element's total width and height */
+    resize: vertical; /* Allow vertical resizing for textareas */
+}
+
+.tool-card textarea::placeholder,
+.tool-card input::placeholder {
+    color: #BBB; /* Lighter placeholder text */
+}
+
+.tool-card textarea:focus,
+.tool-card input:focus {
+    outline: none;
+    border-color: #FFD700; /* Brighter gold on focus */
+    box-shadow: 0 0 8px rgba(165, 148, 61, 0.5); /* Gold glow on focus */
+}
+
+.tool-buttons {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.tool-buttons button {
+    background-color: #A5943D; /* Gold button background */
+    color: #2B0307; /* Dark red text */
+    border: none;
+    border-radius: 8px;
+    padding: 12px 25px;
+    font-size: 1.1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    font-family: 'Jost', sans-serif;
+    font-weight: 600;
+}
+
+.tool-buttons button:hover {
+    background-color: #FFD700; /* Brighter gold on hover */
+    transform: translateY(-2px);
+}
+
+
+/* Responsive Adjustments */
+@media (max-width: 1024px) {
+    .container {
+        flex-direction: column; /* Stack sidebar and main content */
+    }
+
+    .sidebar {
+        width: 100%;
+        min-height: auto;
+        padding-bottom: 20px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+        position: relative; /* Change to relative for mobile layout */
+    }
+
+    .logo-section {
+        padding-top: 15px;
+    }
+
+    .scripta-text-container {
+        margin-bottom: 20px;
+    }
+
+    .sidebar .menu ul {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .sidebar .menu li {
+        margin: 5px 10px;
+    }
+
+    .sidebar .menu li a,
+    .sidebar .menu .menu-header {
+        padding: 8px 15px;
+    }
+
+    .main-content {
+        padding: 20px;
+    }
+
+    .header {
+        justify-content: center;
+        margin-bottom: 30px;
+    }
+
+    .home-icon-link {
+        position: static; /* Reset position for smaller screens */
+        margin-right: 15px; /* Add some space if it's inline */
+    }
+
+    .search-bar {
+        width: 80%;
+        max-width: 400px;
+    }
+
+    .cipher-cards {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .welcome-section h1 {
+        font-size: 2em;
+    }
+
+    .welcome-section .description {
+        font-size: 1em;
+        margin: 15px auto 30px auto;
+    }
+
+    .card {
+        padding: 30px;
+        min-height: 150px;
+    }
+
+    .card h2 {
+        font-size: 1.5em;
+    }
+
+    .scripta-text-container h1 {
+        font-size: 2.5em;
+    }
+
+    .tool-card {
+        padding: 20px;
+    }
+
+    .tool-card h3 {
+        font-size: 1.1em;
+    }
+
+    .tool-buttons {
+        flex-direction: column; /* Stack buttons vertically on small screens */
+        gap: 10px;
+    }
+
+    .tool-buttons button {
+        width: 100%;
+        padding: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .main-content {
+        padding: 15px;
+    }
+
+    .logo-section .s-logo {
+        width: 60px;
+    }
+
+    .scripta-text-container {
+        padding: 15px 0;
+        margin-bottom: 15px;
+    }
+
+    .scripta-text-container h1 {
+        font-size: 2em;
+    }
+
+    .sidebar .menu ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .sidebar .menu li {
+        width: 90%;
+        text-align: center;
+        margin: 5px 0;
+    }
+
+    .search-bar {
+        width: 95%;
+    }
+
+    .welcome-section h1 {
+        font-size: 1.7em;
+    }
+
+    .card {
+        padding: 25px;
+        min-height: 120px;
+    }
+
+    .card h2 {
+        font-size: 1.3em;
+    }
+}

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vigenere Cipher - Crypto Tool-kit</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <aside class="sidebar">
+            <div class="logo-section">
+                <div class="scripta-text-container">
+                    <h1>Scripta</h1>
+                </div>
+            </div>
+            <nav class="menu">
+                <ul>
+                    <li class="menu-header">> Menu</li>
+                    <li><a href="classical-ciphers.html">Classical Ciphers</a></li>
+                    <li><a href="#">Stream & Block Ciphers</a></li>
+                    <li><a href="#">Asymmetric Encryption</a></li>
+                    <li><a href="#">Hash Functions</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                </ul>
+            </nav>
+        </aside>
+
+        <main class="main-content">
+            <header class="header">
+                <a href="index.html" class="home-icon-link">
+                    <i class="fas fa-home home-icon"></i>
+                </a>
+                <div class="search-bar">
+                    <input type="text" placeholder="Search...">
+                    <i class="fas fa-search search-icon"></i>
+                </div>
+            </header>
+
+            <section class="welcome-section">
+                <h1>Vigenere Cipher</h1>
+                <p class="description">The Vigenere cipher is a method of encrypting alphabetic text by using a series of different Caesar ciphers based on the letters of a keyword. It is a polyalphabetic cipher, making it significantly more robust than a simple Caesar cipher against frequency analysis.</p>
+            </section>
+
+            <section class="cipher-tool">
+                <div class="tool-card">
+                    <h3>Input Text</h3>
+                    <textarea id="inputText" rows="6" placeholder="Enter your text here..."></textarea>
+                    <h3>Keyword</h3>
+                    <input type="text" id="vigenereKey" placeholder="Enter keyword (e.g., KEY or CAT)">
+                    <div class="tool-buttons">
+                        <button id="encryptBtn">Encrypt</button>
+                        <button id="decryptBtn">Decrypt</button>
+                    </div>
+                    <h3>Output</h3>
+                    <textarea id="outputText" rows="6" readonly placeholder="Result will appear here..."></textarea>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
