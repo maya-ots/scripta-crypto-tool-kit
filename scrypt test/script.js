@@ -1,6 +1,6 @@
 
 document.addEventListener('DOMContentLoaded', () => {
-    // --- Card Click Handlers for Home Page ---
+    // Card Click Handlers for Home Page
     const classicalCiphersCard = document.getElementById('classical-ciphers-card');
     const streamBlockCiphersCard = document.getElementById('stream-block-ciphers-card');
     const asymmetricEncryptionCard = document.getElementById('asymmetric-encryption-card');
@@ -16,19 +16,19 @@ document.addEventListener('DOMContentLoaded', () => {
     if (streamBlockCiphersCard) {
         streamBlockCiphersCard.addEventListener('click', () => {
             console.log("Clicked Stream & Block Ciphers. (Page not yet defined)");
-             window.location.href = 'stream-block-ciphers.html'; // Uncomment when page exists
+             window.location.href = 'stream-block-ciphers.html'; 
         });
     }
     if (asymmetricEncryptionCard) {
         asymmetricEncryptionCard.addEventListener('click', () => {
             console.log("Clicked Asymmetric Encryption. (Page not yet defined)");
-             window.location.href = 'asymmetric-encryption.html'; // Uncomment when page exists
+             window.location.href = 'asymmetric-encryption.html'; 
         });
     }
     if (hashFunctionsCard) {
         hashFunctionsCard.addEventListener('click', () => {
             console.log("Clicked Hash Functions. (Page not yet defined)");
-             window.location.href = 'hash-functions.html'; // Uncomment when page exists
+             window.location.href = 'hash-functions.html'; 
         });
     }
      
@@ -49,18 +49,18 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // Corrected Rail Fence Cipher Card Handler
+    // Rail Fence Cipher Card Handler
     const railFenceCipherCard = document.getElementById('rail-fence-cipher-card');
     if (railFenceCipherCard) {
-        railFenceCipherCard.addEventListener('click', () => { // <--- ADD THIS ADDEVENTLISTENER
+        railFenceCipherCard.addEventListener('click', () => { 
             window.location.href = 'rail-fence-cipher.html';
-        }); // <--- ADD THIS CLOSING CURLY BRACE AND PARENTHESIS
+        }); 
     }
     const playfairCipherCard = document.getElementById('playfair-cipher-card');
     if (playfairCipherCard) {
         playfairCipherCard.addEventListener('click', () => {
             console.log("Playfair Cipher card CLICKED! (Page not yet created)");
-             window.location.href = 'playfair-cipher.html'; // Uncomment when you create this page
+             window.location.href = 'playfair-cipher.html'; // 
         });
     }
        const aesCipherCard = document.getElementById('aes-cipher-card');
@@ -74,7 +74,6 @@ document.addEventListener('DOMContentLoaded', () => {
     if (rc4CipherCard) {
         rc4CipherCard.addEventListener('click', () => {
             alert("RC4 is a stream cipher, but it's largely considered insecure for new applications due to known vulnerabilities.");
-            // You can uncomment the line below if you create a specific page for RC4:
              window.location.href = 'rc4-cipher.html';
         });
     }
@@ -88,21 +87,17 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
     // --- Home Icon Functionality ---
-    // If you want the home icon on the main page to refresh or simply stay
-    // On classical-ciphers.html, the home icon is already an <a> tag linking to index.html
-    const homeIcon = document.querySelector('.home-icon-link'); // Target the link wrapper if it exists
+    const homeIcon = document.querySelector('.home-icon-link'); 
     if (homeIcon && window.location.pathname.endsWith('/index.html') || window.location.pathname === '/') {
         // If on the index page, clicking home icon could refresh or just log
         homeIcon.addEventListener('click', (event) => {
-            event.preventDefault(); // Prevent default link behavior if you want custom action
+            event.preventDefault(); 
             console.log("Home icon clicked on main page.");
-            // Or if you want it to explicitly reload the home page:
-            // window.location.href = 'index.html';
         });
     }
 
 
-    // --- Search Bar Functionality (Basic Example) ---
+    //  Search Bar Functionality (Basic Example) 
     const searchInput = document.querySelector('.search-bar input');
     const searchIcon = document.querySelector('.search-bar .search-icon');
 
@@ -120,17 +115,14 @@ document.addEventListener('DOMContentLoaded', () => {
     function performSearch(query) {
         if (query.trim() !== '') {
             console.log(`Searching for: ${query}`);
-            // Here you would implement actual search logic:
-            // - Redirect to a search results page: window.location.href = `search.html?query=${encodeURIComponent(query)}`;
-            // - Filter content on the current page (more complex JS)
+          
             alert(`Performing search for: "${query}"`); // For demonstration
         } else {
             console.log("Search query is empty.");
         }
     }
 
-    // --- Cipher-Specific Logic (Caesar Cipher Example) ---
-    // This logic will only run if we are on the caesar-cipher.html page
+    // Cipher-Specific Logic (Caesar Cipher Example) 
     if (window.location.pathname.includes('caesar-cipher.html')) {
         const inputText = document.getElementById('inputText');
         const caesarKey = document.getElementById('caesarKey');
