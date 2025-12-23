@@ -1,4 +1,4 @@
-# Scripta – Cryptography Toolkit
+# Scripta – Cryptography Tolkit
 Scripta is a browser-based cryptography toolkit built using HTML, CSS, and JavaScript. It provides a collection of classical and modern encryption methods, allowing users to experiment with different algorithms directly from their browser without any installation or backend services.
 
 ## Features
